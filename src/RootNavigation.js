@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { StackNavigator, addNavigationHelpers } from 'react-navigation';
+import { addListener } from 'reactTraining/src/modules/Nav/module';
 
 import * as Pages from 'reactTraining/src/pages';
 
@@ -20,6 +21,7 @@ class App extends React.Component {
         navigation={addNavigationHelpers({
           dispatch: this.props.dispatch,
           state: this.props.nav,
+          addListener,
         })}
       />
     );
